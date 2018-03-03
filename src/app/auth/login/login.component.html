@@ -1,0 +1,31 @@
+<div class="header"></div>
+<div class="container-fluid">
+  
+  <div class="signin-wraper">
+    <form [formGroup]="signUpForm" class="form-signin">
+      <!-- <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" height="72" width="72"> -->
+      <h1 class="h3 mb-3 font-weight-normal">StarWar</h1>
+      <div *ngIf="loginError">
+        <p class="text text-danger">Please check your credentials</p> 
+      </div>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input id="inputEmail"
+             formControlName="userName"
+             class="form-control"
+             placeholder="Username"
+             required=""
+             autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input id="inputPassword"
+             class="form-control"
+             formControlName="password"
+             placeholder="Password"
+             required=""
+             type="password">
+      <div class="row">
+        <div class="col"></div>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="SignIn()">Sign in</button>
+    </form>
+  </div>
+</div>

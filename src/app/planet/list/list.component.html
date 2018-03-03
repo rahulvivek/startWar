@@ -1,0 +1,74 @@
+<header>
+  <div class="nav-container">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand">StarWar</a>
+        <div class="collapse navbar-collapse justify-content-between">
+          <ul class="navbar-nav"></ul>
+          <ul class="navbar-nav">
+            <li><a routerLink="/auth/logout">Logout</a></li>
+          </ul>
+        </div>  
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="main-container search-wrapper">
+  <section class="space-xs text-center text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="search-field" [(ngModel)]="planetName" (input)="filterList()" placeholder="Search Planet...">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="main-container">
+  <section class="space-xs text-center text-light">
+    <div class="container">
+        <angular-tag-cloud
+        [data]="data"
+        [width]="options.width"
+        [height]="options.height"
+        [overflow]="options.overflow"
+        (clicked)="logClicked($event)">
+      </angular-tag-cloud>
+
+      <div *ngIf="deatils" class="planet-details">
+        <button type="button" class="close" aria-label="Close" (click)="closeDetails()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <h2>{{deatils.name}}</h2>
+        <h6>Climate: {{deatils.climate}}</h6>
+        <h6>Terrain: {{deatils.terrain}}</h6>
+        <p>
+            <strong>Description: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <table class="table table-striped table-bordered">
+            <tr>
+              <td>Rotation Period</td>
+              <td>Orbital Period</td>
+              <td>Diameter</td>
+              <td>Gravity</td>
+              <td>Surface Water</td>
+              <td>Population</td>
+            </tr>
+            <tr>
+              <td>{{deatils.rotation_period}}</td>
+              <td>{{deatils.orbital_period}}</td>
+              <td>{{deatils.diameter}}</td>
+              <td>{{deatils.gravity}}</td>
+              <td>{{deatils.surface_water}}</td>
+              <td>{{deatils.population}}</td>
+            </tr>
+        </table>
+      </div>
+      <div *ngIf="deatils" class="detail-wrapper"></div>
+
+    </div>
+  </section>
+</div>
+
+

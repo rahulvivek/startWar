@@ -1,0 +1,60 @@
+.nav-container {
+    background: #FBDA24;
+
+    .navbar-brand {
+        font-family: 'Racing Sans One', cursive;
+    }
+
+    .logout {
+        float: right;
+    }
+ }
+
+ .search-wrapper {
+     background: #333;
+     padding: 16px 5px;
+
+     .search-field {
+         padding: 10px 10px;
+         font-size: 24px;
+         width: 100%;
+         font-family: 'Roboto', sans-serif;
+     }
+ }
+
+ angular-tag-cloud {
+     span {
+        font-family: 'Roboto', sans-serif;
+     }
+ }
+
+ .planet-details {
+    position: fixed;
+    top: 30%;
+    border: 1px solid #333;
+    border-radius: 10px;
+    min-height: 200px;
+    left: 30%;
+    right: 30%;
+
+    padding: 15px;
+
+    background: #fff;
+    text-align: left;
+
+    color: #333;
+    z-index: 1002;
+ }
+
+ .detail-wrapper {
+     position: fixed;
+     top: 0px;
+     right: 0px;
+     bottom: 0px;
+     left: 0px;
+
+     
+     background: RGBA(0, 0, 0, 0.73);
+     z-index: 1001;
+     
+ }
