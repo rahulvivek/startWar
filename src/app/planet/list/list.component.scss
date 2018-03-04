@@ -1,12 +1,15 @@
 .nav-container {
-    background: #FBDA24;
+    background: RGBA(53, 70, 75, 0.62);
 
     .navbar-brand {
         font-family: 'Racing Sans One', cursive;
+        color: #fff;
     }
 
-    .logout {
-        float: right;
+    .navbar-nav {
+        a {
+            color: #fff;
+        }
     }
  }
 
@@ -19,6 +22,12 @@
          font-size: 24px;
          width: 100%;
          font-family: 'Roboto', sans-serif;
+     }
+ }
+
+ .content {
+     .container {
+         background: #fff;
      }
  }
 

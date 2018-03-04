@@ -19,17 +19,15 @@ export class LoginComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+    document.getElementsByTagName('body')[0].removeAttribute('class');
   }
 
   SignIn() {
-    console.log(this.signUpForm.value)
     this.loginError = false;
     this.authService.signIn(this.signUpForm.value)
       .then(() => {
-        console.log("login success")
         this.router.navigate(['./planet/list'])
       }).catch(()=> {
-        console.log("Login unsuccessfull")
         this.loginError = true
         this.router.navigate(['/auth/login'])
       })

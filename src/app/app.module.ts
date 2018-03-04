@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { ListPlanetComponent } from './list-planet/list-planet.component';
 import { StarwarApiService } from './services/startwar-api.service';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
@@ -15,7 +14,6 @@ import { AuthGuard } from './auth/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
-    ListPlanetComponent
   ],
   imports: [
     BrowserModule,

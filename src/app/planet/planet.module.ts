@@ -5,7 +5,6 @@ import { TagCloudModule } from 'angular-tag-cloud-module';
 
 import { PlanetRouting } from './planet-routing.module';
 import { ListComponent } from './list/list.component';
-import { DetailComponent } from './detail/detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -16,6 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  declarations: [ListComponent, DetailComponent]
+  declarations: [ListComponent]
 })
 export class PlanetModule { }
